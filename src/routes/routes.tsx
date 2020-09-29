@@ -1,14 +1,7 @@
-import React from "react";
+import { PATHS } from "./paths";
 
-import App from "../app/App";
-
-// @ts-ignore
-import { Redirect } from "react-router-dom";
-import { getPath } from "./paths";
-import { View } from "./routeInterfaces";
 import UserSwitcher from "./UserSwitcher";
-import withUserType from "./withUserType";
-import { UserType } from "../enums/UserType";
+
 import withAuth from "../features/authentication/withAuth";
 import User from "../layouts/user/User";
 import { UserMain } from "../containers/user";
@@ -16,22 +9,22 @@ import Admin from "../layouts/admin/Admin";
 import { AdminMain } from "../containers/admin";
 export const routes = [
   {
-    path: getPath(View.USER),
+    path: PATHS.USER,
     render: withAuth(User),
     routes: [
       {
-        path: getPath(View.USER_MAIN),
+        path: PATHS.USER_MAIN,
 
         component: UserMain,
       },
     ],
   },
   {
-    path: getPath(View.ADMIN),
+    path: PATHS.ADMIN,
     render: withAuth(Admin),
     routes: [
       {
-        path: getPath(View.ADMIN_MAIN),
+        path: PATHS.ADMIN_MAIN,
 
         component: AdminMain,
       },
@@ -39,7 +32,7 @@ export const routes = [
   },
 
   {
-    path: "/",
+    path: PATHS.REDIRECT,
     component: withAuth(UserSwitcher),
   },
 ];

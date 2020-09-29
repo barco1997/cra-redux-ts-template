@@ -8,6 +8,22 @@ export const View = {
 
 export type View = typeof View;
 
+export type CombinedRoutes = {
+  [key in keyof View]: any;
+};
+
+export type GeneralRoutes = {
+  [key in keyof GeneralView]: any;
+};
+
+export type AdminRoutes = {
+  [key in AdminView]: any;
+};
+
+export type UserRoutes = {
+  [key in UserView]: any;
+};
+
 /*const viewMapping = {
   [View.ADMIN]: AdminView,
   [View.USER]: UserView,
@@ -35,19 +51,3 @@ export const combinedRoutesObj = Object.keys(View)
     }),
     {}
   );*/
-
-export type CombinedRoutes = {
-  [key in keyof View]: any;
-};
-
-export type GeneralRoutes = {
-  [key in keyof GeneralView]: any;
-};
-
-export type AdminRoutes = {
-  [key in AdminView]: any;
-};
-
-export type UserRoutes = {
-  [key in UserView]: any;
-};

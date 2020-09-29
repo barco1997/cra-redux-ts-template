@@ -4,7 +4,7 @@ import { AppState, NotificationCall } from "./appInterfaces";
 const initialState: AppState = {
   isAuthenticated: false,
   loaderList: [],
-  callStatus: false,
+
   initialFlag: false,
   notifications: { nextKey: -1, list: [] },
 };

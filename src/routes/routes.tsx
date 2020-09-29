@@ -5,7 +5,7 @@ import App from "../app/App";
 // @ts-ignore
 import { Redirect } from "react-router-dom";
 import { getPath } from "./paths";
-import { View } from "../enums/View";
+import { View } from "./routeInterfaces";
 import UserSwitcher from "./UserSwitcher";
 import withUserType from "./withUserType";
 import { UserType } from "../enums/UserType";

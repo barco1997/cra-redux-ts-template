@@ -1,5 +1,4 @@
-import { View } from "../enums/View";
-import { GeneralRoutes } from "./routeInterfaces";
+import { CombinedRoutes, View } from "./routeInterfaces";
 
 //const
 
@@ -7,11 +6,14 @@ const mapping = Object.freeze({
   [View.ADMIN]: { path: "/admin" },
   [View.USER]: { path: "/user" },
   [View.REDIRECT]: { path: "/" },
-}) as GeneralRoutes;
+}) as CombinedRoutes;
 
-export const getPath = (view: View) => mapping[view].path;
+export const getPath = (view: typeof View[keyof typeof View]) =>
+  mapping[view] ? mapping[view].path : "";
 
-export const VIEW_PATHS = Object.keys(View)
+console.log(getPath(View.USER), View.USER);
+
+export const PATHS = Object.keys(View)
   .map((key) => ({
     [key]: getPath((View as any)[key]),
   }))
@@ -21,7 +23,7 @@ export const VIEW_PATHS = Object.keys(View)
       [Object.keys(item)[0]]: item[Object.keys(item)[0]],
     }),
     {}
-  ) as GeneralRoutes;
+  ) as CombinedRoutes;
 
 export const injectPathParams = (route: string, params: any) => {
   let newRoute = route;

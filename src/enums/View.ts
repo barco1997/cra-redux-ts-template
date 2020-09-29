@@ -1,13 +1,13 @@
-export enum View {
+export enum GeneralView {
   ADMIN = "ADMIN",
   USER = "USER",
   REDIRECT = "REDIRECT",
 }
 
 export enum UserView {
-  MAIN = "MAIN",
+  USER_MAIN = "USER_MAIN",
 }
 
 export enum AdminView {
-  MAIN = "MAIN",
+  ADMIN_MAIN = "ADMIN_MAIN",
 }

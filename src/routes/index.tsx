@@ -1,5 +1,5 @@
-import { VIEW_PATHS } from "./paths";
+import { PATHS } from "./paths";
 
 import { routes } from "./routes";
 
-export { VIEW_PATHS, routes };
+export { PATHS, routes };

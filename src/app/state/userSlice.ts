@@ -3,7 +3,7 @@ import { RootState } from "../store";
 import { UserType } from "../../enums/UserType";
 import { UserState, UserSettings } from "./userInterfaces";
 const initialState: UserState = {
-  userType: UserType.NONE,
+  userType: UserType.USER,
   id: null,
   idpId: null,
   firstName: null,

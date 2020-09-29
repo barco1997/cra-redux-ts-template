@@ -3,7 +3,7 @@ import { NotificationType } from "../../enums/NotificationType";
 export interface AppState {
   isAuthenticated: boolean;
   loaderList: LoaderList[];
-  callStatus: boolean;
+
   initialFlag: boolean;
   notifications: Notifications;
 }

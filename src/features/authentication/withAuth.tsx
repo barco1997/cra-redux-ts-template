@@ -12,7 +12,6 @@ import {
 import { LoadingScreen } from "../loadingScreen/LoadingScreen";
 import { LsValueType } from "../../enums/LsValueType";
 import { selectUserSettingsCompleted } from "../../app/state/userSlice";
-import { VIEW_PATHS } from "../../routes/paths";
 
 const withAuth = (Component: any) => {
   const AuthComponent = (props: any) => {

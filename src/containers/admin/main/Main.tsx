@@ -4,7 +4,9 @@ import styled from "@xstyled/styled-components";
 
 const Wrapper = styled.div`
   display: flex;
-  background: gray;
+  background: red;
+  width: 100%;
+  height: 100vh;
 `;
 
 export const Main = () => {

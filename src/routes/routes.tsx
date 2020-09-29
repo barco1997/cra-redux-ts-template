@@ -13,27 +13,28 @@ import withAuth from "../features/authentication/withAuth";
 import User from "../layouts/user/User";
 import { UserMain } from "../containers/user";
 import Admin from "../layouts/admin/Admin";
+import { AdminMain } from "../containers/admin";
 export const routes = [
   {
     path: getPath(View.USER),
-    render: withAuth(withUserType(UserType.USER)(User)),
+    render: withAuth(User),
     routes: [
-      /*{
-        path: getPath(View.PATIENT_DASHBOARD),
+      {
+        path: getPath(View.USER_MAIN),
 
         component: UserMain,
-      },*/
+      },
     ],
   },
   {
     path: getPath(View.ADMIN),
-    render: withAuth(withUserType(UserType.ADMIN)(Admin)),
+    render: withAuth(Admin),
     routes: [
-      /*{
-        path: getPath(View.DOCTOR_DASHBOARD),
+      {
+        path: getPath(View.ADMIN_MAIN),
 
-        component: DoctorDashboard,
-      },*/
+        component: AdminMain,
+      },
     ],
   },
 

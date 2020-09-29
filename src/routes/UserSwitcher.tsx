@@ -13,15 +13,15 @@ const UserSwitcher = ({ history }: { history: any }) => {
   if (type !== UserType.NONE) {
     switch (type) {
       case UserType.USER:
-        history.push(PATHS.USER);
+        history.push(PATHS.USER_MAIN);
 
         break;
       case UserType.ADMIN:
-        history.push(PATHS.ADMIN);
+        history.push(PATHS.ADMIN_MAIN);
 
         break;
       default:
-        history.push(PATHS.ADMIN);
+        history.push(PATHS.USER_MAIN);
     }
   }
 

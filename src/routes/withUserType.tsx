@@ -11,6 +11,7 @@ const withUserType = (type: UserType) => {
   const enhance = (Component: any) => {
     function WrapperMain(props: any) {
       const globalUserType = useSelector(selectUserType);
+
       if (type === globalUserType) {
         return <Component {...props} />;
       } else {

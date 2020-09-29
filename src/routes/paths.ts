@@ -4,14 +4,14 @@ import { CombinedRoutes, View } from "./routeInterfaces";
 
 const mapping = Object.freeze({
   [View.ADMIN]: { path: "/admin" },
+  [View.ADMIN_MAIN]: { path: "/admin/main" },
   [View.USER]: { path: "/user" },
+  [View.USER_MAIN]: { path: "/user/main" },
   [View.REDIRECT]: { path: "/" },
 }) as CombinedRoutes;
 
 export const getPath = (view: typeof View[keyof typeof View]) =>
   mapping[view] ? mapping[view].path : "";
-
-console.log(getPath(View.USER), View.USER);
 
 export const PATHS = Object.keys(View)
   .map((key) => ({
